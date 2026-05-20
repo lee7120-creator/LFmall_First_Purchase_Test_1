@@ -1,0 +1,609 @@
+/* ============================================================
+   COUPON PAGE STYLES
+============================================================ */
+
+body.coupon-page { background: #f5f5f5; }
+
+/* ============================================================
+   COUPON HEADER
+============================================================ */
+.coupon-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  gap: 4px;
+  height: 52px;
+}
+
+.back-btn {
+  font-size: 24px;
+  color: #111;
+  width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.coupon-header-title {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 600;
+  color: #111;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.coupon-header-icons { display: flex; gap: 4px; flex-shrink: 0; }
+
+/* ============================================================
+   TAB BAR
+============================================================ */
+.coupon-tab-bar {
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 8px;
+  font-size: 13px;
+  height: 42px;
+}
+.ctab {
+  font-weight: 600;
+  color: #111;
+  border-bottom: 2px solid #111;
+  padding-bottom: 2px;
+}
+.ctab-link {
+  color: #999;
+}
+
+/* ============================================================
+   COUPON MAIN
+============================================================ */
+.coupon-main { padding: 0; }
+
+/* ============================================================
+   HERO BANNER (쿠폰 랜딩 최상단)
+============================================================ */
+.coupon-hero {
+  background: #111;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.coupon-hero-inner { position: relative; }
+
+.coupon-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #111 0%, #222 60%, #1a1a2e 100%);
+  overflow: hidden;
+}
+
+.coupon-hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 40px,
+      rgba(255,255,255,.03) 40px,
+      rgba(255,255,255,.03) 80px
+    );
+}
+
+/* 쿠폰 티켓 장식 */
+.coupon-ticket-deco {
+  position: absolute;
+  right: -20px;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ticket {
+  width: 120px; height: 40px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  transform-origin: right center;
+}
+.ticket.t1 {
+  background: linear-gradient(90deg, #c9a227, #e8c547);
+  color: #111;
+  transform: rotate(-8deg) translateX(10px);
+}
+.ticket.t2 {
+  background: linear-gradient(90deg, #2a5298, #4a72b8);
+  color: #fff;
+  transform: rotate(-8deg) translateX(24px);
+}
+
+.coupon-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 36px 24px 32px;
+}
+
+.coupon-hero-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  color: #aac4f0;
+  margin-bottom: 6px;
+  letter-spacing: .04em;
+}
+
+.coupon-hero-title {
+  font-size: 36px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  letter-spacing: -.02em;
+}
+
+.coupon-hero-sub {
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.highlight-20 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.coupon-hero-tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.tag-app {
+  background: #1a66cc;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+.tag-push {
+  background: rgba(255,255,255,.15);
+  color: #ddd;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,.25);
+}
+
+.coupon-hero-detail {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,.1);
+  border-radius: 12px;
+  padding: 14px 16px;
+  gap: 0;
+}
+.hero-detail-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.detail-label {
+  font-size: 10px;
+  color: #aaa;
+  font-weight: 500;
+}
+.detail-val {
+  font-size: 15px;
+  font-weight: 800;
+  color: #fff;
+}
+.detail-val.red { color: #ff6b6b; }
+.hero-detail-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(255,255,255,.2);
+  margin: 0 4px;
+}
+
+/* ============================================================
+   COUPON BLOCK
+============================================================ */
+.coupon-block {
+  background: #fff;
+  margin: 8px 0;
+  padding: 20px 16px;
+}
+
+.coupon-block-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.coupon-block-subtitle {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+/* ============================================================
+   앱 전용 블록
+============================================================ */
+.app-exclusive-block {
+  border-top: 3px solid #1a66cc;
+}
+
+.app-exclusive-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f0f6ff;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  border: 1px solid #c8deff;
+}
+.ae-icon { font-size: 24px; }
+.app-exclusive-badge strong {
+  font-size: 14px;
+  color: #1a66cc;
+  display: block;
+  margin-bottom: 2px;
+}
+.app-exclusive-badge p {
+  font-size: 12px;
+  color: #555;
+}
+
+/* ============================================================
+   COUPON CARDS
+============================================================ */
+.coupon-card-wrap { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+
+.coupon-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 88px;
+}
+
+/* 쿠폰 좌측 점선 구분선 */
+.coupon-card::before {
+  content: '';
+  position: absolute;
+  right: 72px;
+  top: 0; bottom: 0;
+  width: 1px;
+  border-left: 2px dashed rgba(255,255,255,.2);
+}
+
+/* 쿠폰 노치 (반원 오려낸 효과) */
+.coupon-card::after {
+  content: '';
+  position: absolute;
+  right: 63px;
+  top: -10px;
+  width: 20px; height: 20px;
+  background: #f5f5f5;
+  border-radius: 50%;
+}
+
+/* 두 번째 노치 (하단) */
+.coupon-card .coupon-card-left::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  width: 20px; height: 20px;
+  background: #f5f5f5;
+  border-radius: 50%;
+}
+
+.coupon-card--app {
+  background: linear-gradient(135deg, #0a2a5e 0%, #1a4a9e 100%);
+}
+.coupon-card--back {
+  background: #2a2a3a;
+}
+
+.coupon-card-left {
+  flex: 1;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  position: relative;
+}
+
+.cc-tag {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 700;
+  color: rgba(255,255,255,.7);
+  letter-spacing: .06em;
+  margin-bottom: 2px;
+}
+.cc-tag--app { color: #aac4f0; }
+.cc-tag--members { color: #f0c8aa; }
+
+.cc-amount {
+  font-size: 28px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.cc-type {
+  font-size: 12px;
+  color: rgba(255,255,255,.7);
+}
+
+.cc-cond {
+  font-size: 11px;
+  color: rgba(255,255,255,.5);
+  margin-top: 2px;
+}
+
+.coupon-card-right {
+  width: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  flex-shrink: 0;
+}
+
+.cc-dl-btn {
+  width: 40px; height: 40px;
+  border: 2px solid rgba(255,255,255,.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,.8);
+  transition: all .2s;
+}
+.cc-dl-btn:hover, .cc-dl-btn:active {
+  background: rgba(255,255,255,.15);
+  border-color: rgba(255,255,255,.7);
+  color: #fff;
+}
+.cc-dl-btn.downloaded {
+  background: rgba(255,255,255,.2);
+  border-color: rgba(255,255,255,.6);
+}
+.cc-dl-btn.downloaded svg { stroke: #7eff7e; }
+
+.coupon-pager-dots {
+  position: absolute;
+  bottom: 8px; left: 18px;
+  display: flex;
+  gap: 4px;
+}
+.dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.3);
+}
+.dot.active { background: rgba(255,255,255,.8); }
+
+/* ============================================================
+   MARKETING AGREE CHECKBOX
+============================================================ */
+.marketing-agree {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+.marketing-agree input[type="checkbox"] { display: none; }
+.custom-check {
+  width: 18px; height: 18px;
+  border: 1.5px solid #ccc;
+  border-radius: 3px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: all .15s;
+}
+.marketing-agree input:checked + .custom-check {
+  background: #111;
+  border-color: #111;
+}
+.marketing-agree input:checked + .custom-check::after {
+  content: '✓';
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+}
+.marketing-agree span:last-child {
+  font-size: 13px;
+  color: #333;
+}
+.agree-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px; height: 16px;
+  border: 1.5px solid #999;
+  border-radius: 50%;
+  font-size: 10px;
+  color: #666;
+  margin-left: 4px;
+}
+
+/* ============================================================
+   RECEIVE BUTTON
+============================================================ */
+.receive-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: #111;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 10px;
+  text-align: center;
+  transition: opacity .15s;
+  margin-bottom: 8px;
+}
+.receive-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+.receive-btn:not(:disabled):hover { opacity: .88; }
+
+.coupon-notice {
+  font-size: 11px;
+  color: #999;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   ACCORDION
+============================================================ */
+.accordion-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+.acc-arrow { font-size: 16px; color: #666; transition: transform .2s; }
+.acc-arrow.open { transform: rotate(180deg); }
+
+.accordion-body { padding: 12px 0; }
+
+.notice-list li {
+  font-size: 12px;
+  color: #666;
+  padding-left: 12px;
+  position: relative;
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+.notice-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+}
+
+/* ============================================================
+   PRODUCT GRID (쿠폰 페이지용 2열)
+============================================================ */
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.product-card-v { position: relative; }
+
+.product-badge {
+  position: absolute;
+  top: 8px; left: 8px;
+  background: var(--red, #e8192c);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 7px;
+  border-radius: 4px;
+}
+
+.product-card-v .product-brand {
+  font-size: 11px;
+  font-weight: 700;
+  color: #111;
+  margin-top: 7px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.product-card-v .product-name {
+  font-size: 11px;
+  color: #555;
+  margin: 2px 0 3px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.4;
+  white-space: normal;
+}
+.product-card-v .product-price {
+  font-size: 13px;
+  font-weight: 700;
+  color: #111;
+}
+.orig-price {
+  font-size: 11px;
+  font-weight: 400;
+  color: #aaa;
+  text-decoration: line-through;
+  margin-right: 4px;
+}
+
+.sort-tabs {
+  display: flex;
+  gap: 8px;
+}
+.sort-tab {
+  font-size: 12px;
+  color: #999;
+  padding: 4px 10px;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+}
+.sort-tab.active {
+  color: #111;
+  border-color: #111;
+  font-weight: 600;
+}
+
+/* ============================================================
+   TOAST
+============================================================ */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,.82);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 24px;
+  z-index: 9999;
+  white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(0,0,0,.2);
+}

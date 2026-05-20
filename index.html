@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>LF몰 - 패션·라이프스타일</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       FIRST-VISIT POPUP BANNER (W컨셉 스타일)
+  ============================================================ -->
+  <div id="first-visit-overlay" class="first-visit-overlay">
+    <div class="first-visit-card">
+      <button class="fv-close" id="fv-close-btn">✕</button>
+      <div class="fv-body">
+        <div class="fv-coupon-visual">
+          <div class="fv-coupon-stack">
+            <div class="fv-coupon-back"></div>
+            <div class="fv-coupon-front">
+              <span class="fv-coupon-label">신규 가입 쿠폰팩</span>
+              <span class="fv-coupon-rate">~20%</span>
+              <span class="fv-coupon-download">↓</span>
+            </div>
+          </div>
+        </div>
+        <h2 class="fv-title">첫 방문이라면<br>쿠폰함을 확인해보세요!</h2>
+        <p class="fv-subtitle">최대 20% 신규가입 쿠폰팩 지급해드려요</p>
+        <a href="coupon.html" class="fv-cta-btn">쿠폰 받으러 가기</a>
+        <button class="fv-skip" id="fv-skip-btn">오늘 하루 보지 않기</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       HEADER
+  ============================================================ -->
+  <header class="header">
+    <div class="header-top">
+      <div class="header-left">
+        <span class="badge-member">회원가입</span>
+      </div>
+      <a href="index.html" class="logo">
+        <svg width="48" height="24" viewBox="0 0 48 24" fill="none">
+          <text x="0" y="20" font-size="22" font-weight="900" fill="#111" font-family="Arial Black,sans-serif">l.:</text>
+        </svg>
+      </a>
+      <div class="header-icons">
+        <button class="icon-btn" aria-label="검색">
+          <svg width="22" height="22" fill="none" stroke="#111" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="icon-btn" aria-label="장바구니">
+          <svg width="22" height="22" fill="none" stroke="#111" stroke-width="1.8" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="gnb">
+      <ul>
+        <li class="active"><a href="#">프리서머세일 <span class="dot-red"></span></a></li>
+        <li><a href="#">역시즌위크 <span class="dot-red"></span></a></li>
+        <li><a href="#">여성</a></li>
+        <li><a href="#">남성</a></li>
+        <li><a href="#">잡화/슈즈</a></li>
+        <li><a href="#">스포츠</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ============================================================
+       MAIN HERO BANNER (W컨셉 스타일 첫구매 쿠폰 배너)
+  ============================================================ -->
+  <main>
+    <section class="hero-banner-section">
+      <a href="coupon.html" class="hero-banner-link">
+        <div class="hero-banner">
+          <div class="hero-banner-bg"></div>
+          <div class="hero-banner-content">
+            <div class="hero-coupon-visual">
+              <div class="hero-coupon-stack">
+                <div class="hero-coupon-back"></div>
+                <div class="hero-coupon-front">
+                  <span class="hero-coupon-label">신규 가입 쿠폰팩</span>
+                  <span class="hero-coupon-rate">~20%</span>
+                  <span class="hero-coupon-dl">↓</span>
+                </div>
+              </div>
+            </div>
+            <div class="hero-text-block">
+              <p class="hero-eyebrow">앱 첫 구매 혜택</p>
+              <h1 class="hero-title">첫 방문이라면<br><em>~20% 신규가입</em><br>쿠폰팩 받아가세요!</h1>
+              <p class="hero-desc">앱 전용 · 앱 푸시 동의 시 최대 20% 할인</p>
+              <span class="hero-cta">쿠폰 받기 →</span>
+            </div>
+          </div>
+          <div class="hero-banner-pager">1 / 26 +</div>
+        </div>
+      </a>
+    </section>
+
+    <!-- ============================================================
+         CATEGORY SHORTCUT ICONS
+    ============================================================ -->
+    <section class="category-section">
+      <div class="category-scroll">
+        <div class="cat-item">
+          <div class="cat-icon cat-tshirt"></div>
+          <span>여름<br>티셔츠</span>
+        </div>
+        <div class="cat-item">
+          <div class="cat-icon cat-women"></div>
+          <span>여성의류</span>
+        </div>
+        <div class="cat-item">
+          <div class="cat-icon cat-men"></div>
+          <span>남성의류</span>
+        </div>
+        <div class="cat-item">
+          <div class="cat-icon cat-bag"></div>
+          <span>가방/잡화</span>
+        </div>
+        <div class="cat-item">
+          <div class="cat-icon cat-shoes"></div>
+          <span>슈즈</span>
+        </div>
+        <div class="cat-item">
+          <div class="cat-icon cat-pxg"></div>
+          <span>LF단독...</span>
+        </div>
+        <div class="cat-item">
+          <div class="cat-icon cat-luxury"></div>
+          <span>명품</span>
+        </div>
+        <div class="cat-item">
+          <div class="cat-icon cat-golf"></div>
+          <span>골프</span>
+        </div>
+        <div class="cat-item">
+          <div class="cat-icon cat-outlet"></div>
+          <span>아울렛</span>
+        </div>
+        <div class="cat-item">
+          <div class="cat-icon cat-sports"></div>
+          <span>스포츠</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         REVIEW BANNER
+    ============================================================ -->
+    <section class="review-banner">
+      <div class="review-banner-inner">
+        <div class="review-text">
+          <p class="review-title">리뷰 추첨 1만 마일리지</p>
+          <p class="review-sub">AI로 쉽고 빠르게 리뷰 작성하기</p>
+        </div>
+        <div class="review-img-placeholder"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PERSONALIZED RECOMMENDATION
+    ============================================================ -->
+    <section class="recommendation-section">
+      <div class="section-header">
+        <h2 class="section-title">고객님을 위한 추천</h2>
+        <a href="#" class="section-more">›</a>
+      </div>
+
+      <h3 class="sub-section-title">관심상품 추천</h3>
+      <div class="product-scroll">
+        <div class="product-card">
+          <div class="product-img" style="background:#d4c9be;"></div>
+          <div class="product-like">♡</div>
+          <p class="product-brand">KEEN</p>
+          <p class="product-name">[26SS] [KEEN x South2... </p>
+          <p class="product-price">129,000</p>
+        </div>
+        <div class="product-card">
+          <div class="product-img" style="background:#c8c8c0;"></div>
+          <div class="product-like">♡</div>
+          <p class="product-brand">allegri Women</p>
+          <p class="product-name">[26SS] 블랙《Lux Cool》실...</p>
+          <p class="product-price"><span class="discount-rate">10%</span> 125,100</p>
+        </div>
+        <div class="product-card">
+          <div class="product-img" style="background:#b8b0a8;"></div>
+          <div class="product-like">♡</div>
+          <p class="product-brand">AT</p>
+          <p class="product-name">[26SS] 신상 여름...</p>
+          <p class="product-price"><span class="discount-rate">15%</span> 89,000</p>
+        </div>
+      </div>
+
+      <h3 class="sub-section-title" style="margin-top:20px;">연관상품 추천</h3>
+      <div class="product-scroll">
+        <div class="product-card">
+          <div class="product-img" style="background:#3a3a3a;"></div>
+          <div class="product-like">♡</div>
+          <p class="product-brand">JILLSTUART NEWYORK...</p>
+          <p class="product-name">[26SS] [완반재입고]AUB...</p>
+          <p class="product-price"><span class="discount-rate">31%</span> 273,170</p>
+        </div>
+        <div class="product-card">
+          <div class="product-img" style="background:#a0998f;"></div>
+          <div class="product-like">♡</div>
+          <p class="product-brand">ATHE VANESSABRUNO...</p>
+          <p class="product-name">[LF몰 단독] 블랙 소프트 커...</p>
+          <p class="product-price"><span class="discount-rate">23%</span> 198,530</p>
+        </div>
+        <div class="product-card">
+          <div class="product-img" style="background:#8a8a8a;"></div>
+          <div class="product-like">♡</div>
+          <p class="product-brand">AT</p>
+          <p class="product-name">[26SS] 프리미엄 린넨...</p>
+          <p class="product-price"><span class="discount-rate">20%</span> 156,000</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         가족의 발견 SECTION
+    ============================================================ -->
+    <section class="family-section">
+      <div class="section-header">
+        <h2 class="section-title">가족의 발견</h2>
+      </div>
+      <div class="product-scroll">
+        <div class="product-card">
+          <div class="product-img" style="background:#e8e0d5; height:200px;"></div>
+          <p class="product-brand">가족 함께</p>
+          <p class="product-name">여름 가족 코디 특집</p>
+          <p class="product-price">~30% OFF</p>
+        </div>
+        <div class="product-card">
+          <div class="product-img" style="background:#d5dce8; height:200px;"></div>
+          <p class="product-brand">아동의류</p>
+          <p class="product-name">키즈 여름 신상</p>
+          <p class="product-price">~25% OFF</p>
+        </div>
+        <div class="product-card">
+          <div class="product-img" style="background:#e8d5d5; height:200px;"></div>
+          <p class="product-brand">홈&리빙</p>
+          <p class="product-name">여름 리빙 특가</p>
+          <p class="product-price">~40% OFF</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FLOATING SCROLL TOP
+    ============================================================ -->
+    <button class="scroll-top-btn" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+  </main>
+
+  <!-- ============================================================
+       BOTTOM NAVIGATION
+  ============================================================ -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="bnav-item active">
+      <svg width="22" height="22" fill="#111" viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V21H15v-6H9v6H3z"/></svg>
+      <span>홈</span>
+    </a>
+    <a href="#" class="bnav-item">
+      <svg width="22" height="22" fill="none" stroke="#666" stroke-width="1.6" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+      <span>카테고리</span>
+    </a>
+    <a href="#" class="bnav-item">
+      <svg width="22" height="22" fill="none" stroke="#666" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <span>검색</span>
+    </a>
+    <a href="#" class="bnav-item">
+      <svg width="22" height="22" fill="none" stroke="#666" stroke-width="1.8" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+      <span>하트</span>
+    </a>
+    <a href="#" class="bnav-item">
+      <svg width="22" height="22" fill="none" stroke="#666" stroke-width="1.8" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>마이</span>
+    </a>
+  </nav>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
