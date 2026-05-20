@@ -333,13 +333,12 @@
 .cat-men     { background: #e3f2fd; }
 .cat-bag     { background: #f3e5f5; }
 .cat-shoes   { background: #e8f5e9; }
-.cat-lf      { background: #fff3e0; }
 .cat-luxury  { background: #fef9e7; }
 .cat-golf    { background: #e8f5e9; }
 .cat-outlet  { background: #e8eaf6; }
 .cat-sports  { background: #e1f5fe; }
 
-/* PXG 검정 배경 + 흰 텍스트 */
+/* LF단독 검정 배경 + 흰 텍스트 */
 .cat-lf {
   background: #111;
   display: flex;
@@ -348,23 +347,25 @@
 }
 .cat-lf::after {
   content: 'LF';
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 900;
   color: #fff;
   letter-spacing: -.01em;
 }
 
-.cat-outlet::after {
-  content: 'OUTLET';
-  position: absolute;
-  inset: 0;
+/* OUTLET 텍스트 오버레이 */
+.cat-outlet {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 8px;
+}
+.cat-outlet::after {
+  content: 'OUTLET';
+  font-size: 7.5px;
   font-weight: 800;
-  color: #333;
-  letter-spacing: .04em;
+  color: #444;
+  letter-spacing: .05em;
+  text-align: center;
 }
 
 /* ============================================================

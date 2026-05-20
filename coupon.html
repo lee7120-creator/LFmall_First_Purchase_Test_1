@@ -25,7 +25,7 @@
     </div>
   </header>
 
-  <!-- 첫구매 안내 탭 -->
+  <!-- TAB BAR -->
   <div class="coupon-tab-bar">
     <span class="ctab active">첫구매하면 최대 128,000원 혜택</span>
     <a href="#" class="ctab-link">첫구매혜택</a>
@@ -34,48 +34,29 @@
   <main class="coupon-main">
 
     <!-- ============================================================
-         TOP HERO BANNER - 앱 첫구매 20% 강조
+         WELCOME COUPON HERO BANNER
     ============================================================ -->
     <section class="coupon-hero">
       <div class="coupon-hero-inner">
         <div class="coupon-hero-bg">
-          <div class="coupon-hero-overlay"></div>
-          <!-- 쿠폰 틱 장식 -->
+          <!-- 쿠폰 티켓 장식 -->
           <div class="coupon-ticket-deco">
             <div class="ticket t1"><span>PLUS COUPON</span></div>
             <div class="ticket t2"><span>MEMBERS COUPON</span></div>
           </div>
         </div>
         <div class="coupon-hero-content">
-          <p class="coupon-hero-eyebrow">📱 앱 전용 첫 구매 혜택</p>
+          <p class="coupon-hero-eyebrow">반가워요! 앱에서 첫 구매 시 최대 20% 혜택</p>
           <h2 class="coupon-hero-title">WELCOME<br>COUPON</h2>
-          <p class="coupon-hero-sub">반가워요! 앱에서 <strong>첫 구매 시</strong><br>최대 <strong class="highlight-20">20% 할인</strong> 혜택을 드려요</p>
-          <div class="coupon-hero-tags">
-            <span class="tag-app">📱 앱 전용</span>
-            <span class="tag-push">앱 푸시 동의 필수</span>
-          </div>
-          <div class="coupon-hero-detail">
-            <div class="hero-detail-item">
-              <span class="detail-label">최대 할인율</span>
-              <span class="detail-val red">20%</span>
-            </div>
-            <div class="hero-detail-divider"></div>
-            <div class="hero-detail-item">
-              <span class="detail-label">최대 혜택금액</span>
-              <span class="detail-val red">128,000원</span>
-            </div>
-            <div class="hero-detail-divider"></div>
-            <div class="hero-detail-item">
-              <span class="detail-label">혜택 기간</span>
-              <span class="detail-val">5.1 ~ 5.31</span>
-            </div>
-          </div>
+          <p class="coupon-hero-sub">최대 128,000원 혜택</p>
+          <p class="coupon-hero-date">5.1 00:00 - 5.31 23:59</p>
         </div>
       </div>
     </section>
 
     <!-- ============================================================
-         앱 전용 20% 쿠폰 (최우선 노출 - 신규 추가)
+         앱 전용 20% 쿠폰 (최우선 노출)
+         NOTE: NO "한번에 받기" button in this section
     ============================================================ -->
     <section class="coupon-block app-exclusive-block">
       <div class="app-exclusive-badge">
@@ -93,16 +74,24 @@
         <div class="coupon-card coupon-card--app">
           <div class="coupon-card-left">
             <span class="cc-tag cc-tag--app">앱 전용</span>
-            <span class="cc-amount">20%</span>
+            <div class="cc-amount-row">
+              <span class="cc-amount">20%</span>
+            </div>
             <span class="cc-type">PLUS쿠폰</span>
             <span class="cc-cond">3만원 이상 구매시 / 최대 15,000원</span>
+          </div>
+          <div class="coupon-divider">
+            <div class="notch notch-top"></div>
+            <div class="notch notch-bottom"></div>
           </div>
           <div class="coupon-card-right">
             <button class="cc-dl-btn" onclick="downloadCoupon(this, 'app20')">
               <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             </button>
           </div>
-          <div class="coupon-pager-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+          <div class="coupon-pager-dots">
+            <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+          </div>
         </div>
       </div>
 
@@ -112,99 +101,39 @@
         <span>앱 푸시 동의 <strong>(필수)</strong> <a href="#" class="agree-link">?</a></span>
       </label>
 
-      <button class="receive-btn" id="app-coupon-btn" disabled onclick="receiveAppCoupon()">
-        앱 전용 쿠폰 한번에 받기
-      </button>
-
       <p class="coupon-notice">* 앱 설치 후 푸시 알림을 허용해야 쿠폰이 지급됩니다</p>
     </section>
 
     <!-- ============================================================
-         웰컴쿠폰팩 5종
+         웰컴쿠폰팩 5종 - ONE representative dark card
     ============================================================ -->
     <section class="coupon-block">
       <h2 class="coupon-block-title">웰컴쿠폰팩 5종</h2>
       <p class="coupon-block-subtitle">최대 128,000원 할인</p>
 
       <div class="coupon-card-wrap">
-
-        <!-- 쿠폰 1 -->
         <div class="coupon-card">
           <div class="coupon-card-left">
             <span class="cc-tag">PLUS쿠폰</span>
-            <span class="cc-amount">15,000</span>
-            <span class="cc-type">원</span>
+            <div class="cc-amount-row">
+              <span class="cc-amount cc-amount--large">15,000</span>
+              <span class="cc-unit">원</span>
+            </div>
             <span class="cc-cond">10만원 이상 구매시</span>
+          </div>
+          <div class="coupon-divider">
+            <div class="notch notch-top"></div>
+            <div class="notch notch-bottom"></div>
           </div>
           <div class="coupon-card-right">
             <button class="cc-dl-btn" onclick="downloadCoupon(this, 'w1')">
               <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             </button>
           </div>
-          <div class="coupon-pager-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
-        </div>
-
-        <!-- 쿠폰 2 -->
-        <div class="coupon-card">
-          <div class="coupon-card-left">
-            <span class="cc-tag">PLUS쿠폰</span>
-            <span class="cc-amount">10,000</span>
-            <span class="cc-type">원</span>
-            <span class="cc-cond">7만원 이상 구매시</span>
-          </div>
-          <div class="coupon-card-right">
-            <button class="cc-dl-btn" onclick="downloadCoupon(this, 'w2')">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            </button>
-          </div>
-          <div class="coupon-pager-dots"><span class="dot active"></span><span class="dot"></span></div>
-        </div>
-
-        <!-- 쿠폰 3 -->
-        <div class="coupon-card">
-          <div class="coupon-card-left">
-            <span class="cc-tag">PLUS쿠폰</span>
-            <span class="cc-amount">5,000</span>
-            <span class="cc-type">원</span>
-            <span class="cc-cond">3만원 이상 구매시</span>
-          </div>
-          <div class="coupon-card-right">
-            <button class="cc-dl-btn" onclick="downloadCoupon(this, 'w3')">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            </button>
+          <div class="coupon-pager-dots">
+            <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
           </div>
         </div>
-
-        <!-- 쿠폰 4 -->
-        <div class="coupon-card">
-          <div class="coupon-card-left">
-            <span class="cc-tag cc-tag--members">MEMBERS쿠폰</span>
-            <span class="cc-amount">3,000</span>
-            <span class="cc-type">원</span>
-            <span class="cc-cond">2만원 이상 구매시</span>
-          </div>
-          <div class="coupon-card-right">
-            <button class="cc-dl-btn" onclick="downloadCoupon(this, 'w4')">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- 쿠폰 5 -->
-        <div class="coupon-card">
-          <div class="coupon-card-left">
-            <span class="cc-tag cc-tag--members">MEMBERS쿠폰</span>
-            <span class="cc-amount">2,000</span>
-            <span class="cc-type">원</span>
-            <span class="cc-cond">1만원 이상 구매시</span>
-          </div>
-          <div class="coupon-card-right">
-            <button class="cc-dl-btn" onclick="downloadCoupon(this, 'w5')">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            </button>
-          </div>
-        </div>
-
       </div>
 
       <label class="marketing-agree">
@@ -217,90 +146,35 @@
     </section>
 
     <!-- ============================================================
-         웰컴백 특별 혜택 5종
+         웰컴백 특별 혜택 5종 - ONE representative dark card
     ============================================================ -->
     <section class="coupon-block">
       <h2 class="coupon-block-title">웰컴백 특별 혜택 5종</h2>
       <p class="coupon-block-subtitle">(6개월 미구매 고객 대상)</p>
 
       <div class="coupon-card-wrap">
-
-        <!-- 백 쿠폰 1 -->
         <div class="coupon-card coupon-card--back">
           <div class="coupon-card-left">
             <span class="cc-tag">PLUS쿠폰</span>
-            <span class="cc-amount">10,000</span>
-            <span class="cc-type">원</span>
+            <div class="cc-amount-row">
+              <span class="cc-amount cc-amount--large">10,000</span>
+              <span class="cc-unit">원</span>
+            </div>
             <span class="cc-cond">7만원 이상 구매시</span>
+          </div>
+          <div class="coupon-divider">
+            <div class="notch notch-top"></div>
+            <div class="notch notch-bottom"></div>
           </div>
           <div class="coupon-card-right">
             <button class="cc-dl-btn" onclick="downloadCoupon(this, 'b1')">
               <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             </button>
           </div>
-          <div class="coupon-pager-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-        </div>
-
-        <!-- 백 쿠폰 2 -->
-        <div class="coupon-card coupon-card--back">
-          <div class="coupon-card-left">
-            <span class="cc-tag">PLUS쿠폰</span>
-            <span class="cc-amount">7,000</span>
-            <span class="cc-type">원</span>
-            <span class="cc-cond">5만원 이상 구매시</span>
-          </div>
-          <div class="coupon-card-right">
-            <button class="cc-dl-btn" onclick="downloadCoupon(this, 'b2')">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            </button>
+          <div class="coupon-pager-dots">
+            <span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
           </div>
         </div>
-
-        <!-- 백 쿠폰 3 -->
-        <div class="coupon-card coupon-card--back">
-          <div class="coupon-card-left">
-            <span class="cc-tag">PLUS쿠폰</span>
-            <span class="cc-amount">5,000</span>
-            <span class="cc-type">원</span>
-            <span class="cc-cond">3만원 이상 구매시</span>
-          </div>
-          <div class="coupon-card-right">
-            <button class="cc-dl-btn" onclick="downloadCoupon(this, 'b3')">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- 백 쿠폰 4 -->
-        <div class="coupon-card coupon-card--back">
-          <div class="coupon-card-left">
-            <span class="cc-tag cc-tag--members">MEMBERS쿠폰</span>
-            <span class="cc-amount">3,000</span>
-            <span class="cc-type">원</span>
-            <span class="cc-cond">2만원 이상 구매시</span>
-          </div>
-          <div class="coupon-card-right">
-            <button class="cc-dl-btn" onclick="downloadCoupon(this, 'b4')">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- 백 쿠폰 5 -->
-        <div class="coupon-card coupon-card--back">
-          <div class="coupon-card-left">
-            <span class="cc-tag cc-tag--members">MEMBERS쿠폰</span>
-            <span class="cc-amount">2,000</span>
-            <span class="cc-type">원</span>
-            <span class="cc-cond">1만원 이상 구매시</span>
-          </div>
-          <div class="coupon-card-right">
-            <button class="cc-dl-btn" onclick="downloadCoupon(this, 'b5')">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            </button>
-          </div>
-        </div>
-
       </div>
 
       <label class="marketing-agree">
@@ -313,9 +187,9 @@
     </section>
 
     <!-- ============================================================
-         유의사항 / 결제혜택 ACCORDION
+         ACCORDION: 유의사항 / 결제혜택
     ============================================================ -->
-    <section class="coupon-block">
+    <section class="coupon-block accordion-section">
       <button class="accordion-btn" onclick="toggleAccordion('notice')">
         유의사항 <span class="acc-arrow" id="notice-arrow">∨</span>
       </button>
@@ -380,7 +254,7 @@
           <div class="product-img" style="background:#e8e0d8; height:180px; border-radius:8px;"></div>
           <div class="product-badge">10%</div>
           <p class="product-brand">HAZZYS LADIES</p>
-          <p class="product-name">[애너블랙(BEST)] 화이트 나 뭐 추가 생각 좀 해...</p>
+          <p class="product-name">[애너블랙(BEST)] 화이트 여성 여름 린넨 반팔...</p>
           <p class="product-price"><span class="orig-price">219,000</span> 197,100</p>
         </div>
       </div>

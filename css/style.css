@@ -46,12 +46,15 @@ img { display: block; max-width: 100%; }
   justify-content: space-between;
   padding: 0 16px;
   font-size: 12px;
+  letter-spacing: 0.01em;
 }
 .announce-bar span { flex: 1; }
 .announce-bar .anno-arrow {
-  font-size: 14px;
+  font-size: 16px;
   color: #ccc;
   flex-shrink: 0;
+  margin-left: 8px;
+  line-height: 1;
 }
 
 /* ============================================================
@@ -83,6 +86,7 @@ img { display: block; max-width: 100%; }
   letter-spacing: -2px;
   color: #111;
   line-height: 1;
+  user-select: none;
 }
 
 .header-left { display: flex; align-items: center; gap: 6px; }
