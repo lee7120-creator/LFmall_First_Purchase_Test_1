@@ -529,6 +529,10 @@
   color: #111;
 }
 
+/* 정적 이미지 추천 영역 */
+.rec-static-img-wrap { padding: 0 16px; }
+.rec-static-img { width: 100%; display: block; border-radius: 0; }
+
 /* ============================================================
    FAMILY SECTION
 ============================================================ */
