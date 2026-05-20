@@ -1,33 +1,5 @@
-function downloadCoupon(btn, id) {
-  btn.classList.add('downloaded');
-  btn.innerHTML = '<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>';
-  showToast('쿠폰이 쿠폰함에 담겼어요 🎉');
-}
-function updateCouponState() {
-  var agree = document.getElementById('push-agree');
-  var btn = document.getElementById('app-coupon-btn');
-  if (btn) btn.disabled = !agree.checked;
-}
-function receiveAppCoupon() {
-  var agree = document.getElementById('push-agree');
-  if (!agree || !agree.checked) return;
-  showToast('앱 전용 20% 쿠폰이 지급되었어요 📱');
-  var btn = document.getElementById('app-coupon-btn');
-  btn.textContent = '✓ 수령 완료'; btn.disabled = true;
-}
-function receiveAllCoupons(type) { showToast('쿠폰팩이 모두 지급되었어요 🎉'); }
-function toggleAccordion(id) {
-  var body = document.getElementById(id + '-body');
-  var arrow = document.getElementById(id + '-arrow');
-  if (!body) return;
-  var isOpen = body.style.display !== 'none';
-  body.style.display = isOpen ? 'none' : 'block';
-  if (arrow) arrow.classList.toggle('open', !isOpen);
-}
-function showToast(msg) {
-  var toast = document.getElementById('toast');
-  if (!toast) return;
-  toast.textContent = msg; toast.style.display = 'block';
-  clearTimeout(toast._timer);
-  toast._timer = setTimeout(function () { toast.style.display = 'none'; }, 2400);
-}
+function downloadCoupon(btn,id){btn.classList.add('downloaded');btn.innerHTML='<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>';showToast('쿠폰이 쿠폰함에 담겼어요 🎉');}
+function updateCouponState(){var a=document.getElementById('push-agree'),b=document.getElementById('app-coupon-btn');if(b)b.disabled=!a.checked;}
+function receiveAllCoupons(t){showToast('쿠폰팩이 모두 지급되었어요 🎉');}
+function toggleAccordion(id){var b=document.getElementById(id+'-body'),a=document.getElementById(id+'-arrow');if(!b)return;var open=b.style.display!=='none';b.style.display=open?'none':'block';if(a)a.classList.toggle('open',!open);}
+function showToast(msg){var t=document.getElementById('toast');if(!t)return;t.textContent=msg;t.style.display='block';clearTimeout(t._timer);t._timer=setTimeout(function(){t.style.display='none';},2400);}
