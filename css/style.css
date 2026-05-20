@@ -18,11 +18,10 @@ body {
 a { text-decoration: none; color: inherit; }
 button { border: none; background: none; cursor: pointer; font-family: inherit; }
 ul { list-style: none; }
-
 img { display: block; max-width: 100%; }
 
 /* ============================================================
-   COLORS
+   COLOR TOKENS
 ============================================================ */
 :root {
   --red: #e8192c;
@@ -34,6 +33,26 @@ img { display: block; max-width: 100%; }
 }
 
 .red { color: var(--red); }
+
+/* ============================================================
+   ANNOUNCEMENT BAR
+============================================================ */
+.announce-bar {
+  background: #111;
+  color: #fff;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  font-size: 12px;
+}
+.announce-bar span { flex: 1; }
+.announce-bar .anno-arrow {
+  font-size: 14px;
+  color: #ccc;
+  flex-shrink: 0;
+}
 
 /* ============================================================
    HEADER
@@ -52,6 +71,7 @@ img { display: block; max-width: 100%; }
   justify-content: space-between;
   padding: 10px 16px;
   height: 52px;
+  position: relative;
 }
 
 .logo {
@@ -60,8 +80,9 @@ img { display: block; max-width: 100%; }
   transform: translateX(-50%);
   font-size: 22px;
   font-weight: 900;
-  letter-spacing: -1px;
+  letter-spacing: -2px;
   color: #111;
+  line-height: 1;
 }
 
 .header-left { display: flex; align-items: center; gap: 6px; }
@@ -70,20 +91,25 @@ img { display: block; max-width: 100%; }
   background: #111;
   color: #fff;
   font-size: 11px;
-  padding: 3px 8px;
-  border-radius: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 14px;
   white-space: nowrap;
+  letter-spacing: -0.02em;
 }
 
-.header-icons { display: flex; gap: 4px; }
+.header-icons { display: flex; gap: 2px; }
 
 .icon-btn {
   width: 36px; height: 36px;
   display: flex; align-items: center; justify-content: center;
   background: none;
+  flex-shrink: 0;
 }
 
-/* GNB */
+/* ============================================================
+   GNB
+============================================================ */
 .gnb {
   overflow-x: auto;
   scrollbar-width: none;
@@ -94,17 +120,19 @@ img { display: block; max-width: 100%; }
   display: flex;
   gap: 0;
   padding: 0 12px;
+  border-bottom: 1px solid var(--gray-border);
 }
 .gnb li a {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 3px;
   padding: 10px 10px;
   font-size: 13px;
-  color: #444;
+  color: #666;
   white-space: nowrap;
   font-weight: 500;
   border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
 }
 .gnb li.active a {
   color: #111;
@@ -116,7 +144,9 @@ img { display: block; max-width: 100%; }
   width: 4px; height: 4px;
   background: var(--red);
   border-radius: 50%;
-  margin-left: 2px;
+  margin-left: 1px;
+  vertical-align: middle;
+  flex-shrink: 0;
 }
 
 /* ============================================================
@@ -211,7 +241,8 @@ img { display: block; max-width: 100%; }
 ============================================================ */
 .bottom-nav {
   position: fixed;
-  bottom: 0; left: 50%;
+  bottom: 0;
+  left: 50%;
   transform: translateX(-50%);
   width: 100%;
   max-width: 480px;
