@@ -47,9 +47,7 @@
   ============================================================ -->
   <header class="header">
     <div class="header-top">
-      <div class="header-left">
-        <span class="badge-member">회원가입</span>
-      </div>
+      <div class="header-left"></div>
       <a href="index.html" class="logo">l.:</a>
       <div class="header-icons">
         <button class="icon-btn" aria-label="검색">
@@ -109,23 +107,33 @@
     <section class="category-section">
       <div class="category-scroll">
         <div class="cat-item">
-          <div class="cat-icon cat-tshirt"></div>
+          <div class="cat-icon cat-tshirt">
+            <div class="cat-photo cat-photo--tshirt"></div>
+          </div>
           <span>여름<br>티셔츠</span>
         </div>
         <div class="cat-item">
-          <div class="cat-icon cat-women"></div>
+          <div class="cat-icon cat-women">
+            <div class="cat-photo cat-photo--women"></div>
+          </div>
           <span>여성의류</span>
         </div>
         <div class="cat-item">
-          <div class="cat-icon cat-men"></div>
+          <div class="cat-icon cat-men">
+            <div class="cat-photo cat-photo--men"></div>
+          </div>
           <span>남성의류</span>
         </div>
         <div class="cat-item">
-          <div class="cat-icon cat-bag"></div>
+          <div class="cat-icon cat-bag">
+            <div class="cat-photo cat-photo--bag"></div>
+          </div>
           <span>가방/잡화</span>
         </div>
         <div class="cat-item">
-          <div class="cat-icon cat-shoes"></div>
+          <div class="cat-icon cat-shoes">
+            <div class="cat-photo cat-photo--shoes"></div>
+          </div>
           <span>슈즈</span>
         </div>
         <div class="cat-item">
@@ -133,11 +141,15 @@
           <span>LF단독</span>
         </div>
         <div class="cat-item">
-          <div class="cat-icon cat-luxury"></div>
+          <div class="cat-icon cat-luxury">
+            <div class="cat-photo cat-photo--luxury"></div>
+          </div>
           <span>명품</span>
         </div>
         <div class="cat-item">
-          <div class="cat-icon cat-golf"></div>
+          <div class="cat-icon cat-golf">
+            <div class="cat-photo cat-photo--golf"></div>
+          </div>
           <span>골프</span>
         </div>
         <div class="cat-item">
@@ -145,21 +157,26 @@
           <span>아울렛</span>
         </div>
         <div class="cat-item">
-          <div class="cat-icon cat-sports"></div>
+          <div class="cat-icon cat-sports">
+            <div class="cat-photo cat-photo--sports"></div>
+          </div>
           <span>스포츠</span>
         </div>
       </div>
     </section>
 
-    <!-- REVIEW BANNER -->
-    <section class="review-banner">
-      <div class="review-banner-inner">
-        <div class="review-text">
-          <p class="review-title">리뷰 추첨 1만 마일리지</p>
-          <p class="review-sub">AI로 쉽고 빠르게 리뷰 작성하기</p>
+    <!-- FIRST PURCHASE PROMO BANNER -->
+    <section class="promo-banner">
+      <a href="coupon.html" class="promo-banner-inner">
+        <div class="promo-icon">
+          <svg width="28" height="28" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M20 12v10H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
         </div>
-        <div class="review-img-placeholder"></div>
-      </div>
+        <div class="promo-text">
+          <p class="promo-title">앱 첫구매 <strong>20% 쿠폰팩</strong> 받기</p>
+          <p class="promo-sub">앱 전용 · 3만원 이상 구매 시 최대 15,000원 할인</p>
+        </div>
+        <span class="promo-arrow">›</span>
+      </a>
     </section>
 
     <!-- PERSONALIZED RECOMMENDATION -->
@@ -170,52 +187,42 @@
       </div>
 
       <h3 class="sub-section-title">관심상품 추천</h3>
-      <div class="product-scroll">
-        <div class="product-card">
-          <div class="product-img" style="background:#d4c9be;"></div>
-          <div class="product-like">♡</div>
+      <div class="rec-grid">
+        <div class="rec-card">
+          <div class="rec-img rec-img--keen">
+            <button class="rec-like">♡</button>
+          </div>
           <p class="product-brand">KEEN</p>
-          <p class="product-name">[26SS] [KEEN x South2...</p>
+          <p class="product-name">[26SS] [KEEN x South2West8] 아이레아 H2 블랙 남성 슬라이드</p>
           <p class="product-price">129,000</p>
         </div>
-        <div class="product-card">
-          <div class="product-img" style="background:#c8c8c0;"></div>
-          <div class="product-like">♡</div>
+        <div class="rec-card">
+          <div class="rec-img rec-img--allegri">
+            <button class="rec-like">♡</button>
+          </div>
           <p class="product-brand">allegri Women</p>
-          <p class="product-name">[26SS] 블랙《Lux Cool》실...</p>
+          <p class="product-name">[26SS] 블랙《Lux Cool》실크 혼방 반팔</p>
           <p class="product-price"><span class="discount-rate">10%</span> 125,100</p>
-        </div>
-        <div class="product-card">
-          <div class="product-img" style="background:#b8b0a8;"></div>
-          <div class="product-like">♡</div>
-          <p class="product-brand">AT</p>
-          <p class="product-name">[26SS] 신상 여름...</p>
-          <p class="product-price"><span class="discount-rate">15%</span> 89,000</p>
         </div>
       </div>
 
       <h3 class="sub-section-title" style="margin-top:20px;">연관상품 추천</h3>
-      <div class="product-scroll">
-        <div class="product-card">
-          <div class="product-img" style="background:#3a3a3a;"></div>
-          <div class="product-like">♡</div>
+      <div class="rec-grid">
+        <div class="rec-card">
+          <div class="rec-img rec-img--jill">
+            <button class="rec-like">♡</button>
+          </div>
           <p class="product-brand">JILLSTUART NEWYORK</p>
-          <p class="product-name">[26SS] [완반재입고]AUB...</p>
+          <p class="product-name">[26SS] [완반재입고] AUB 미니 토트백</p>
           <p class="product-price"><span class="discount-rate">31%</span> 273,170</p>
         </div>
-        <div class="product-card">
-          <div class="product-img" style="background:#a0998f;"></div>
-          <div class="product-like">♡</div>
+        <div class="rec-card">
+          <div class="rec-img rec-img--athe">
+            <button class="rec-like">♡</button>
+          </div>
           <p class="product-brand">ATHE VANESSABRUNO</p>
-          <p class="product-name">[LF몰 단독] 블랙 소프트 커...</p>
+          <p class="product-name">[LF몰 단독] 블랙 소프트 커버 백팩</p>
           <p class="product-price"><span class="discount-rate">23%</span> 198,530</p>
-        </div>
-        <div class="product-card">
-          <div class="product-img" style="background:#8a8a8a;"></div>
-          <div class="product-like">♡</div>
-          <p class="product-brand">AT</p>
-          <p class="product-name">[26SS] 프리미엄 린넨...</p>
-          <p class="product-price"><span class="discount-rate">20%</span> 156,000</p>
         </div>
       </div>
     </section>

@@ -39,7 +39,6 @@
     <section class="coupon-hero">
       <div class="coupon-hero-inner">
         <div class="coupon-hero-bg">
-          <!-- 쿠폰 티켓 장식 -->
           <div class="coupon-ticket-deco">
             <div class="ticket t1"><span>PLUS COUPON</span></div>
             <div class="ticket t2"><span>MEMBERS COUPON</span></div>
@@ -55,8 +54,7 @@
     </section>
 
     <!-- ============================================================
-         앱 전용 20% 쿠폰 (최우선 노출)
-         NOTE: NO "한번에 받기" button in this section
+         앱 전용 20% 쿠폰
     ============================================================ -->
     <section class="coupon-block app-exclusive-block">
       <div class="app-exclusive-badge">
@@ -70,6 +68,12 @@
       <h2 class="coupon-block-title">앱 첫구매 <span class="red">20% 쿠폰</span></h2>
       <p class="coupon-block-subtitle">3만원 이상 구매 시 · 최대 15,000원 할인</p>
 
+      <!-- 유효기한 1일 강조 배지 -->
+      <div class="validity-badge">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>쿠폰 유효기한 <strong>발급 후 1일</strong> — 오늘 받고 오늘 쓰세요!</span>
+      </div>
+
       <div class="coupon-card-wrap">
         <div class="coupon-card coupon-card--app">
           <div class="coupon-card-left">
@@ -79,6 +83,7 @@
             </div>
             <span class="cc-type">PLUS쿠폰</span>
             <span class="cc-cond">3만원 이상 구매시 / 최대 15,000원</span>
+            <span class="cc-expire">유효: 발급일로부터 1일</span>
           </div>
           <div class="coupon-divider">
             <div class="notch notch-top"></div>
@@ -102,10 +107,11 @@
       </label>
 
       <p class="coupon-notice">* 앱 설치 후 푸시 알림을 허용해야 쿠폰이 지급됩니다</p>
+      <p class="coupon-notice coupon-notice--red">* 쿠폰 유효기한은 발급 후 24시간이므로 즉시 사용해 주세요</p>
     </section>
 
     <!-- ============================================================
-         웰컴쿠폰팩 5종 - ONE representative dark card
+         웰컴쿠폰팩 5종
     ============================================================ -->
     <section class="coupon-block">
       <h2 class="coupon-block-title">웰컴쿠폰팩 5종</h2>
@@ -146,7 +152,7 @@
     </section>
 
     <!-- ============================================================
-         웰컴백 특별 혜택 5종 - ONE representative dark card
+         웰컴백 특별 혜택 5종
     ============================================================ -->
     <section class="coupon-block">
       <h2 class="coupon-block-title">웰컴백 특별 혜택 5종</h2>
@@ -195,7 +201,8 @@
       </button>
       <div class="accordion-body" id="notice-body" style="display:none;">
         <ul class="notice-list">
-          <li>쿠폰은 발급 후 30일 이내 사용 가능합니다.</li>
+          <li>앱 전용 20% 쿠폰은 발급 후 <strong>1일(24시간)</strong> 이내 사용 가능합니다.</li>
+          <li>웰컴쿠폰팩 및 웰컴백 쿠폰은 발급 후 30일 이내 사용 가능합니다.</li>
           <li>앱 전용 쿠폰은 LF몰 앱에서만 사용 가능합니다.</li>
           <li>앱 푸시 동의 취소 시 쿠폰이 회수될 수 있습니다.</li>
           <li>쿠폰은 1인 1회 발급이며 중복 적용 불가합니다.</li>
@@ -231,28 +238,31 @@
 
       <div class="product-grid">
         <div class="product-card-v">
-          <div class="product-img" style="background:#d4c9be; height:180px; border-radius:8px;"></div>
+          <div class="best-img best-img--keen"></div>
           <p class="product-brand">KEEN</p>
           <p class="product-name">[KEEN x South2West8] 아이레아 H2 블랙 남성 슬라...</p>
           <p class="product-price">129,000</p>
         </div>
         <div class="product-card-v">
-          <div class="product-img" style="background:#b0a8a0; height:180px; border-radius:8px;"></div>
-          <div class="product-badge">27%</div>
+          <div class="best-img best-img--rolex">
+            <div class="product-badge">27%</div>
+          </div>
           <p class="product-brand">ROLEX</p>
           <p class="product-name">[앨리브] 롤렉스 데이 저스트36 실버 브라이트...</p>
           <p class="product-price"><span class="orig-price">34,540,000</span> 25,203,510</p>
         </div>
         <div class="product-card-v">
-          <div class="product-img" style="background:#2a2a2a; height:180px; border-radius:8px;"></div>
-          <div class="product-badge">14%</div>
+          <div class="best-img best-img--hazzys-golf">
+            <div class="product-badge">14%</div>
+          </div>
           <p class="product-brand">HAZZYS GOLF WOMEN</p>
           <p class="product-name">[애너블랙(BEST)] 블랙 노 포켓 트라이앵글 와이드...</p>
           <p class="product-price"><span class="orig-price">159,000</span> 135,940</p>
         </div>
         <div class="product-card-v">
-          <div class="product-img" style="background:#e8e0d8; height:180px; border-radius:8px;"></div>
-          <div class="product-badge">10%</div>
+          <div class="best-img best-img--hazzys-ladies">
+            <div class="product-badge">10%</div>
+          </div>
           <p class="product-brand">HAZZYS LADIES</p>
           <p class="product-name">[애너블랙(BEST)] 화이트 여성 여름 린넨 반팔...</p>
           <p class="product-price"><span class="orig-price">219,000</span> 197,100</p>
@@ -264,6 +274,17 @@
 
   <!-- 쿠폰 다운로드 토스트 -->
   <div id="toast" class="toast" style="display:none;">쿠폰이 쿠폰함에 담겼어요 🎉</div>
+
+  <!-- FOMO 타이머 (받기 버튼 클릭 시 활성화) -->
+  <div id="fomo-timer" class="fomo-timer" style="display:none;">
+    <div class="fomo-timer-inner">
+      <span class="fomo-flame">🔥</span>
+      <div class="fomo-text">
+        <p class="fomo-label">쿠폰 만료까지</p>
+        <p class="fomo-time" id="fomo-time">23:59:59</p>
+      </div>
+    </div>
+  </div>
 
   <script src="js/coupon.js"></script>
 </body>

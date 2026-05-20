@@ -319,26 +319,66 @@
 }
 
 .cat-icon {
-  width: 48px; height: 48px;
-  border-radius: 50%;
+  width: 52px; height: 52px;
+  border-radius: 16px;
   background: #f0f0f0;
   overflow: hidden;
   position: relative;
   flex-shrink: 0;
 }
 
-/* 아이콘 파스텔 색상 */
-.cat-tshirt  { background: #ffe8d6; }
-.cat-women   { background: #fce4ec; }
-.cat-men     { background: #e3f2fd; }
-.cat-bag     { background: #f3e5f5; }
-.cat-shoes   { background: #e8f5e9; }
-.cat-luxury  { background: #fef9e7; }
-.cat-golf    { background: #e8f5e9; }
-.cat-outlet  { background: #e8eaf6; }
-.cat-sports  { background: #e1f5fe; }
+/* 카테고리 배경 + 사진 스타일 */
+.cat-tshirt  { background: #f5e8e0; }
+.cat-women   { background: #f2e8ec; }
+.cat-men     { background: #e8eff7; }
+.cat-bag     { background: #ede8f0; }
+.cat-shoes   { background: #eaf0ec; }
+.cat-luxury  { background: #f5f0e8; }
+.cat-golf    { background: #e8f0ea; }
+.cat-outlet  { background: #eaebf5; }
+.cat-sports  { background: #e6f2f8; }
 
-/* LF단독 검정 배경 + 흰 텍스트 */
+/* 카테고리 사진 placeholder */
+.cat-photo {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+.cat-photo--tshirt {
+  background: linear-gradient(160deg, #f9d5c0 0%, #f0b8a0 60%, #e89880 100%);
+  clip-path: ellipse(32% 45% at 50% 40%);
+}
+.cat-photo--women {
+  background: linear-gradient(160deg, #e8c0cc 0%, #d4a0b4 60%, #c08898 100%);
+  clip-path: ellipse(28% 46% at 50% 38%);
+}
+.cat-photo--men {
+  background: linear-gradient(160deg, #b8cce0 0%, #8aaece 60%, #6090bc 100%);
+  clip-path: ellipse(30% 46% at 50% 38%);
+}
+.cat-photo--bag {
+  background: linear-gradient(145deg, #c8b8d0 0%, #b0a0bc 50%, #9888a8 100%);
+  clip-path: ellipse(38% 30% at 50% 55%);
+}
+.cat-photo--shoes {
+  background: linear-gradient(150deg, #c0d0c4 0%, #a0b8a4 50%, #809888 100%);
+  clip-path: ellipse(40% 22% at 50% 60%);
+}
+.cat-photo--luxury {
+  background: linear-gradient(145deg, #d8c8a8 0%, #c0a880 50%, #a89060 100%);
+  clip-path: ellipse(36% 28% at 50% 56%);
+}
+.cat-photo--golf {
+  background: linear-gradient(150deg, #b8d0c0 0%, #90b898 50%, #68a070 100%);
+  clip-path: circle(18% at 50% 44%);
+}
+.cat-photo--sports {
+  background: linear-gradient(150deg, #c0d8e8 0%, #90b8d0 50%, #6898b8 100%);
+  clip-path: ellipse(28% 44% at 50% 38%);
+}
+
+/* LF단독 - PXG 스타일 검정 */
 .cat-lf {
   background: #111;
   display: flex;
@@ -346,11 +386,11 @@
   justify-content: center;
 }
 .cat-lf::after {
-  content: 'LF';
-  font-size: 13px;
+  content: 'PXG';
+  font-size: 11px;
   font-weight: 900;
-  color: #fff;
-  letter-spacing: -.01em;
+  color: #d4af37;
+  letter-spacing: .05em;
 }
 
 /* OUTLET 텍스트 오버레이 */
@@ -361,7 +401,7 @@
 }
 .cat-outlet::after {
   content: 'OUTLET';
-  font-size: 7.5px;
+  font-size: 7px;
   font-weight: 800;
   color: #444;
   letter-spacing: .05em;
@@ -369,44 +409,173 @@
 }
 
 /* ============================================================
-   REVIEW BANNER
+   FIRST PURCHASE PROMO BANNER
 ============================================================ */
-.review-banner {
+.promo-banner {
   margin: 14px 16px;
-  background: linear-gradient(90deg, #eef2ff 0%, #f5efff 100%);
   border-radius: 12px;
   overflow: hidden;
+  background: linear-gradient(90deg, #0d1f4a 0%, #1a3a8a 100%);
 }
 
-.review-banner-inner {
+.promo-banner-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 12px;
   padding: 14px 16px;
+  text-decoration: none;
 }
 
-.review-title {
+.promo-icon {
+  width: 44px; height: 44px;
+  background: rgba(255,255,255,.12);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.promo-text { flex: 1; }
+
+.promo-title {
   font-size: 14px;
-  font-weight: 700;
-  color: #111;
+  font-weight: 600;
+  color: #fff;
   margin-bottom: 3px;
 }
-.review-sub {
-  font-size: 12px;
-  color: #666;
+.promo-title strong {
+  color: #ffd44a;
 }
 
-.review-img-placeholder {
-  width: 60px; height: 52px;
-  background: linear-gradient(135deg, #c0b8f8 0%, #f8c0c8 100%);
-  border-radius: 8px;
+.promo-sub {
+  font-size: 11px;
+  color: rgba(255,255,255,.7);
+}
+
+.promo-arrow {
+  font-size: 20px;
+  color: rgba(255,255,255,.6);
   flex-shrink: 0;
 }
 
 /* ============================================================
-   RECOMMENDATION
+   RECOMMENDATION (2-column grid)
 ============================================================ */
 .recommendation-section { padding-bottom: 24px; }
+
+.rec-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 0 16px 4px;
+}
+
+.rec-card {
+  position: relative;
+}
+
+.rec-img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+/* 상품 이미지 플레이스홀더 - 실제 사진 느낌 */
+.rec-img--keen {
+  background: linear-gradient(160deg, #d4cbbe 20%, #b8aa98 60%, #9c9080 100%);
+}
+.rec-img--keen::after {
+  content: '';
+  position: absolute;
+  bottom: 15%; left: 50%;
+  transform: translateX(-50%);
+  width: 70%; height: 30%;
+  background: linear-gradient(90deg, #888 0%, #aaa 40%, #888 100%);
+  border-radius: 4px;
+  opacity: .7;
+}
+
+.rec-img--allegri {
+  background: linear-gradient(180deg, #1a1a1a 0%, #2a2a2a 50%, #1a1a1a 100%);
+}
+.rec-img--allegri::before {
+  content: '';
+  position: absolute;
+  top: 10%; left: 25%;
+  width: 50%; height: 75%;
+  background: linear-gradient(180deg, #2a2a2a 0%, #111 100%);
+  border-radius: 50% 50% 20% 20% / 40% 40% 10% 10%;
+  opacity: .9;
+}
+
+.rec-img--jill {
+  background: linear-gradient(160deg, #3a3a3a 0%, #222 60%, #111 100%);
+}
+.rec-img--jill::after {
+  content: '';
+  position: absolute;
+  bottom: 20%; left: 15%;
+  width: 70%; height: 45%;
+  background: linear-gradient(135deg, #444 0%, #666 50%, #444 100%);
+  border-radius: 6px 6px 12px 12px;
+  opacity: .85;
+}
+
+.rec-img--athe {
+  background: linear-gradient(160deg, #a8a0a8 0%, #888090 60%, #686070 100%);
+}
+.rec-img--athe::after {
+  content: '';
+  position: absolute;
+  top: 15%; left: 20%;
+  width: 60%; height: 65%;
+  background: linear-gradient(145deg, #b8b0b8 0%, #888088 100%);
+  border-radius: 8px 8px 50% 50% / 8px 8px 30% 30%;
+  opacity: .8;
+}
+
+.rec-like {
+  position: absolute;
+  top: 8px; right: 8px;
+  font-size: 18px;
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0,0,0,.4);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  line-height: 1;
+  padding: 2px;
+}
+
+.rec-card .product-brand {
+  font-size: 11px;
+  font-weight: 700;
+  color: #111;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 2px;
+}
+
+.rec-card .product-name {
+  font-size: 11px;
+  color: #555;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.rec-card .product-price {
+  font-size: 13px;
+  font-weight: 700;
+  color: #111;
+}
 
 /* ============================================================
    FAMILY SECTION

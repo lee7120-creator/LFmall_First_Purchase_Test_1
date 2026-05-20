@@ -602,6 +602,89 @@ body.coupon-page {
 }
 
 /* ============================================================
+   VALIDITY BADGE (유효기한 1일 강조)
+============================================================ */
+.validity-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 8px;
+  padding: 9px 12px;
+  margin-bottom: 14px;
+  font-size: 12px;
+  color: #7a4f00;
+}
+.validity-badge svg { flex-shrink: 0; color: #e65100; }
+.validity-badge strong { color: #e65100; font-weight: 700; }
+
+/* 유효기한 표기 (카드 내) */
+.cc-expire {
+  font-size: 9px;
+  color: rgba(255,180,100,.85);
+  margin-top: 2px;
+  display: block;
+}
+
+/* 빨간 안내 문구 */
+.coupon-notice--red {
+  color: #e8192c !important;
+  font-weight: 600;
+}
+
+/* ============================================================
+   FOMO TIMER
+============================================================ */
+.fomo-timer {
+  position: fixed;
+  bottom: 86px;
+  right: 16px;
+  z-index: 200;
+  animation: fomoIn .35s cubic-bezier(.34,1.56,.64,1);
+}
+
+@keyframes fomoIn {
+  from { transform: scale(.6) translateY(20px); opacity: 0; }
+  to   { transform: scale(1) translateY(0);     opacity: 1; }
+}
+
+.fomo-timer-inner {
+  background: #e8192c;
+  border-radius: 16px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 20px rgba(232,25,44,.45);
+  min-width: 130px;
+}
+
+.fomo-flame {
+  font-size: 20px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.fomo-text { line-height: 1.2; }
+
+.fomo-label {
+  font-size: 9px;
+  color: rgba(255,255,255,.82);
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.fomo-time {
+  font-size: 20px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: .04em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============================================================
    PRODUCT GRID (쿠폰 페이지용 2열)
 ============================================================ */
 .product-grid {
@@ -612,6 +695,68 @@ body.coupon-page {
 
 .product-card-v {
   position: relative;
+}
+
+/* 베스트 상품 이미지 - 사진 느낌 플레이스홀더 */
+.best-img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.best-img--keen {
+  background: linear-gradient(170deg, #c8beb4 0%, #a89e94 50%, #887e74 100%);
+}
+.best-img--keen::after {
+  content: '';
+  position: absolute;
+  bottom: 12%; left: 50%;
+  transform: translateX(-50%);
+  width: 75%; height: 28%;
+  background: linear-gradient(90deg, #706050 0%, #988870 40%, #706050 100%);
+  border-radius: 6px;
+  opacity: .8;
+}
+
+.best-img--rolex {
+  background: linear-gradient(160deg, #a8a8a8 0%, #888 50%, #606060 100%);
+}
+.best-img--rolex::after {
+  content: '';
+  position: absolute;
+  top: 18%; left: 50%;
+  transform: translateX(-50%);
+  width: 55%; height: 55%;
+  background: radial-gradient(circle, #c8c8c8 30%, #909090 70%);
+  border-radius: 50%;
+  border: 3px solid #b0b0b0;
+  box-shadow: inset 0 0 8px rgba(0,0,0,.3);
+}
+
+.best-img--hazzys-golf {
+  background: linear-gradient(160deg, #1a1a1a 0%, #2a2a2a 60%, #111 100%);
+}
+.best-img--hazzys-golf::before {
+  content: '';
+  position: absolute;
+  top: 8%; left: 22%;
+  width: 56%; height: 80%;
+  background: linear-gradient(180deg, #2a2a2a 0%, #111 100%);
+  border-radius: 50% 50% 20% 20% / 35% 35% 10% 10%;
+}
+
+.best-img--hazzys-ladies {
+  background: linear-gradient(160deg, #f0ece8 0%, #ddd8d0 50%, #c8c0b8 100%);
+}
+.best-img--hazzys-ladies::before {
+  content: '';
+  position: absolute;
+  top: 6%; left: 24%;
+  width: 52%; height: 78%;
+  background: linear-gradient(180deg, #e8e4e0 0%, #c8c4c0 100%);
+  border-radius: 50% 50% 18% 18% / 35% 35% 10% 10%;
 }
 
 .product-badge {
